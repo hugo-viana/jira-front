@@ -14,3 +14,8 @@ function loadTextFileAjaxSync(filePath, mimeType){
         return null;
     }
 }
+
+function getJSON(request_url) {
+    var json = loadTextFileAjaxSync(request_url, "application/json");
+    return JSON.parse(json)
+}
